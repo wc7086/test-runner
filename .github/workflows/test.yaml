@@ -1,0 +1,13 @@
+name: test
+on:
+    workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: test
+        run: |
+          touch test.txt
+          .\test.cmd
